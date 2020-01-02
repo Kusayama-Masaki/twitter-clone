@@ -1,12 +1,12 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
-import Hello from "./hello";
+import BaseLayout from "./baseLayout";
 
-describe("Hello", () => {
+describe("BaseLayout", () => {
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Hello />);
+    wrapper = shallow(<BaseLayout />);
   });
 
   it("dummy", () => {

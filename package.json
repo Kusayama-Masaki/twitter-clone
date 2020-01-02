@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint --ext .tsx,.ts,.js, pages components",
     "lint:fix": "eslint --fix --ext .tsx,.ts,.js, pages components",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "husky": {
     "hooks": {

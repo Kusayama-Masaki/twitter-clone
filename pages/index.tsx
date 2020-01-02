@@ -1,12 +1,13 @@
 import React from "react";
 import { NextPage } from "next";
 
-import Hello from "../components/atoms/hello/hello";
+import BaseLayout from "../components/templates/baseLayout/baseLayout";
 
 const Index: NextPage = () => (
   <div>
-    <h1>index page</h1>
-    <Hello />
+    <BaseLayout>
+      <div />
+    </BaseLayout>
   </div>
 );
 
