@@ -7,6 +7,6 @@ module.exports = {
   testEnvironment: "jsdom",
   testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"],
   testPathIgnorePatterns: ["/node_modules/", "/.next/"],
-  snapshotSerializers: ["enzyme-to-json/serializer"],
+  snapshotSerializers: ["enzyme-to-json/serializer", "jest-emotion"],
   setupFilesAfterEnv: ["./setup-enzyme.ts"]
 };

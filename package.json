@@ -13,18 +13,25 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm test"
     }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@zeit/next-css": "^1.0.1",
     "next": "^9.1.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@types/enzyme": "^3.10.4",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.25",
@@ -33,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
     "babel-jest": "^24.9.0",
+    "babel-plugin-emotion": "^10.0.27",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
@@ -42,6 +50,7 @@
     "eslint-plugin-react": "^7.17.0",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
+    "jest-emotion": "^10.0.27",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
     "ts-jest": "^24.2.0",
