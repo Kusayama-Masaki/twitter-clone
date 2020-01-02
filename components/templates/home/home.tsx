@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { css } from "@emotion/core";
 import { colors } from "../../assets/styles/variables";
 
-import PageHeader from "../../molecules/pageHeader/pageHeader";
+import SectionHeader from "../../molecules/sectionHeader/sectionHeader";
 import Timeline from "../../organisms/timeline/timeline";
 
 const Home: FC = () => (
   <section css={styles.root}>
-    <PageHeader title="ホーム" />
+    <SectionHeader title="ホーム" icon="star-of-life" />
     <Timeline />
   </section>
 );

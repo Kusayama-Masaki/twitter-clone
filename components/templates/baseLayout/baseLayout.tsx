@@ -1,17 +1,22 @@
-import React, { FC } from "react";
+import React, { FC, ReactElement } from "react";
 import { css } from "@emotion/core";
 import { mq } from "../../assets/styles/mixins";
 import { contentWidth } from "../../assets/styles/variables";
 
 import Navigation from "../../organisms/navigation/navigation";
 
-const BaseLayout: FC = ({ children }) => (
+interface Props {
+  mainElement: ReactElement;
+  subElement?: ReactElement;
+}
+
+const BaseLayout: FC<Props> = ({ mainElement, subElement }) => (
   <div css={styles.root}>
     <aside css={styles.nav}>
       <Navigation />
     </aside>
-    <main css={styles.main}>{children}</main>
-    <aside css={styles.info} />
+    <main css={styles.main}>{mainElement}</main>
+    {subElement && <aside css={styles.sub}>{subElement}</aside>}
   </div>
 );
 
@@ -42,9 +47,10 @@ const styles = {
     flex-grow: 1;
   `,
 
-  info: css`
+  sub: css`
     display: none;
     min-width: 350px;
+    margin-left: 25px;
     ${[mq("md")]} {
       display: block;
     }
