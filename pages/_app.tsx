@@ -21,6 +21,7 @@ class TwitterClone extends App {
 
 const styles = {
   root: css`
+    color: ${colors.white};
     background-color: ${colors.navy};
   `
 };

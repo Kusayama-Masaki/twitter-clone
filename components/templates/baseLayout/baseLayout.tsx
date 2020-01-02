@@ -32,9 +32,9 @@ const styles = {
 
   nav: css`
     display: flex;
-    width: 68px;
-    ${[mq("md")]} {
-      width: 275px;
+    min-width: 68px;
+    ${[mq("xl")]} {
+      min-width: 275px;
     }
   `,
 
@@ -44,7 +44,7 @@ const styles = {
 
   info: css`
     display: none;
-    width: 350px;
+    min-width: 350px;
     ${[mq("md")]} {
       display: block;
     }

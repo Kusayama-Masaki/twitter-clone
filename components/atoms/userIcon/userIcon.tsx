@@ -19,12 +19,18 @@ const UserIcon: FC<Props> = ({ user, size }) => (
 
 const styles = {
   root: css`
-    width: 46px;
-    height: 46px;
+    width: 100%;
+
+    &.xs {
+      min-width: 25px;
+    }
 
     &.sm {
-      width: 25px;
-      height: 25px;
+      min-width: 39px;
+    }
+
+    &.md {
+      min-width: 46px;
     }
   `,
 

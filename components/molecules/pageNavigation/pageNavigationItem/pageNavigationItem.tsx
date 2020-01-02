@@ -34,7 +34,6 @@ const styles = {
   root: css`
     font-size: 1.8rem;
     font-weight: bold;
-    color: ${colors.white};
     & + & {
       margin-top: 10px;
     }
@@ -42,7 +41,7 @@ const styles = {
       color: ${colors.blue};
       cursor: pointer;
       > div {
-        background-color: rgba(29, 161, 242, 0.1);
+        background-color: ${colors.lightNavy};
       }
     }
   `,
@@ -80,7 +79,7 @@ const styles = {
   text: css`
     display: none;
     margin-left: 12px;
-    ${[mq("md")]} {
+    ${[mq("xl")]} {
       display: block;
     }
   `

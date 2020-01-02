@@ -49,7 +49,7 @@ const pageNavigation: PageNavigationItem[] = [
   {
     id: "profile",
     text: "プロフィール",
-    icon: <UserIcon user={user} size="sm" />
+    icon: <UserIcon user={user} size="xs" />
   },
   {
     id: "more",
