@@ -3,9 +3,13 @@ import { css } from "@emotion/core";
 import { mq } from "../../assets/styles/mixins";
 import { contentWidth } from "../../assets/styles/variables";
 
+import Navigation from "../../organisms/navigation/navigation";
+
 const BaseLayout: FC = ({ children }) => (
   <div css={styles.root}>
-    <aside css={styles.nav} />
+    <aside css={styles.nav}>
+      <Navigation />
+    </aside>
     <main css={styles.main}>{children}</main>
     <aside css={styles.info} />
   </div>
@@ -29,7 +33,6 @@ const styles = {
   nav: css`
     display: flex;
     width: 68px;
-    background: tomato;
     ${[mq("md")]} {
       width: 275px;
     }
@@ -42,7 +45,6 @@ const styles = {
   info: css`
     display: none;
     width: 350px;
-    background: orange;
     ${[mq("md")]} {
       display: block;
     }
