@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { css } from "@emotion/core";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { mq } from "../../../assets/styles/mixins";
 
 import IconButton from "../../iconButton/iconButton";
 
@@ -74,7 +75,12 @@ const styles = {
     align-items: center;
   `,
 
-  count: css``
+  count: css`
+    display: none;
+    ${[mq("xs")]} {
+      display: block;
+    }
+  `
 };
 
 export default TweetContentActions;
