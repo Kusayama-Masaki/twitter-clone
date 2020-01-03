@@ -12,3 +12,10 @@ interface TrendItem {
   name: string;
   count: number;
 }
+
+interface User {
+  id: string;
+  name: string;
+  image: string;
+  isFollowed: boolean;
+}

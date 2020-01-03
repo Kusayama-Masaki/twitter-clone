@@ -6,7 +6,7 @@ describe("BaseLayout", () => {
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<BaseLayout />);
+    wrapper = shallow(<BaseLayout mainElement={<div />} />);
   });
 
   it("dummy", () => {

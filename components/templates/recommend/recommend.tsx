@@ -1,16 +1,21 @@
 import React, { FC } from "react";
 import { css } from "@emotion/core";
 
-import Trend from "../../organisms/trend/trend";
+import RecommendTrend from "../../organisms/recommendTrend/recommendTrend";
+import RecommendUser from "../../organisms/recommendUser/recommendUser";
 
 const Recommend: FC = () => (
   <div css={styles.root}>
-    <Trend />
+    <RecommendTrend />
+    <RecommendUser />
   </div>
 );
 
 const styles = {
-  root: css``
+  root: css`
+    position: sticky;
+    top: 15px;
+  `
 };
 
 export default Recommend;

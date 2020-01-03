@@ -36,6 +36,8 @@ const styles = {
   `,
 
   nav: css`
+    position: fixed;
+    top: 0;
     display: flex;
     min-width: 68px;
     ${[mq("xl")]} {
@@ -45,6 +47,10 @@ const styles = {
 
   main: css`
     flex-grow: 1;
+    padding-left: 68px;
+    ${[mq("xl")]} {
+      padding-left: 275px;
+    }
   `,
 
   sub: css`

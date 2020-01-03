@@ -7,7 +7,7 @@ import Timeline from "../../organisms/timeline/timeline";
 
 const Home: FC = () => (
   <section css={styles.root}>
-    <SectionHeader title="ホーム" icon="star-of-life" />
+    <SectionHeader title="ホーム" icon="star-of-life" isSticky={true} />
     <Timeline />
   </section>
 );

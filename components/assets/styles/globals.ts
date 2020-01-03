@@ -14,5 +14,6 @@ export const globalStyles = css`
     height: 100%;
     font-size: 1.5rem;
     line-height: 1.2;
+    overscroll-behavior: none;
   }
 `;

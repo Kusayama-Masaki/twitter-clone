@@ -7,7 +7,7 @@ import SectionHeader from "../sectionHeader/sectionHeader";
 
 interface Props {
   title: string;
-  icon: IconProp;
+  icon?: IconProp;
 }
 
 const SectionBox: FC<Props> = props => {
@@ -23,9 +23,16 @@ const SectionBox: FC<Props> = props => {
 
 const styles = {
   root: css`
-    margin-top: 15px;
     border-radius: 10px;
     border: 1px solid ${colors.lightBlack};
+    & + & {
+      margin-top: 15px;
+    }
+
+    > header {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
   `
 };
 

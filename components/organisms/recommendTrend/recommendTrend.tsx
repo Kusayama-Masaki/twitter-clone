@@ -20,7 +20,7 @@ const trendList: TrendItem[] = [
   }
 ];
 
-const Trend: FC = () => {
+const RecommendTrend: FC = () => {
   const handleClickItem = (name: string) => {
     console.log(name);
   };
@@ -44,4 +44,4 @@ const styles = {
   root: css``
 };
 
-export default Trend;
+export default RecommendTrend;
