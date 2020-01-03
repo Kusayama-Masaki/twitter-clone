@@ -11,6 +11,8 @@ import IconButton from "../../iconButton/iconButton";
  */
 
 interface Props {
+  retweetCount: number;
+  favoriteCount: number;
   clickAction: (id: string) => void;
 }
 
@@ -20,47 +22,50 @@ interface Action {
   count?: number;
 }
 
-const actions: Action[] = [
-  {
-    id: "replay",
-    icon: "comment",
-    count: 10
-  },
-  {
-    id: "retweet",
-    icon: "retweet",
-    count: 100
-  },
-  {
-    id: "fav",
-    icon: "heart",
-    count: 1
-  },
-  {
-    id: "tool",
-    icon: "toolbox"
-  },
-  {
-    id: "pocket",
-    icon: ["fab", "get-pocket"]
-  }
-];
+const TweetContentActions: FC<Props> = props => {
+  const { retweetCount, favoriteCount, clickAction } = props;
+  const actions: Action[] = [
+    {
+      id: "replay",
+      icon: "comment",
+      count: 0
+    },
+    {
+      id: "retweet",
+      icon: "retweet",
+      count: retweetCount
+    },
+    {
+      id: "fav",
+      icon: "heart",
+      count: favoriteCount
+    },
+    {
+      id: "tool",
+      icon: "toolbox"
+    },
+    {
+      id: "pocket",
+      icon: ["fab", "get-pocket"]
+    }
+  ];
 
-const TweetContentActions: FC<Props> = ({ clickAction }) => (
-  <ul css={styles.root}>
-    {actions.map(action => (
-      <li
-        key={action.id}
-        css={styles.inner}
-        onClick={() => clickAction(action.id)}
-      >
-        <IconButton icon={action.icon}>
-          {action.count && <span css={styles.count}>{action.count}</span>}
-        </IconButton>
-      </li>
-    ))}
-  </ul>
-);
+  return (
+    <ul css={styles.root}>
+      {actions.map(action => (
+        <li
+          key={action.id}
+          css={styles.inner}
+          onClick={() => clickAction(action.id)}
+        >
+          <IconButton icon={action.icon}>
+            {action.count && <span css={styles.count}>{action.count}</span>}
+          </IconButton>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 const styles = {
   root: css`

@@ -8,7 +8,7 @@ import PageNavigation from "../../molecules/pageNavigation/pageNavigation";
 // TODO: APIからユーザーデータ流し込み
 const user = {
   name: "test",
-  image: "http://placehold.jp/100x100.png"
+  profile_image_url_https: "http://placehold.jp/100x100.png"
 };
 
 const pageNavigation: PageNavigationItem[] = [

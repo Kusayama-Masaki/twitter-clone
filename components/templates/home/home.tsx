@@ -5,10 +5,14 @@ import { colors } from "../../assets/styles/variables";
 import SectionHeader from "../../molecules/sectionHeader/sectionHeader";
 import Timeline from "../../organisms/timeline/timeline";
 
-const Home: FC = () => (
+interface Props {
+  tweets: any[];
+}
+
+const Home: FC<Props> = ({ tweets }) => (
   <section css={styles.root}>
     <SectionHeader title="ホーム" icon="star-of-life" isSticky={true} />
-    <Timeline />
+    <Timeline tweets={tweets} />
   </section>
 );
 

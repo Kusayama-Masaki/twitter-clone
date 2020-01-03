@@ -6,15 +6,16 @@ import { colors } from "../../assets/styles/variables";
 import UserIcon from "../../atoms/userIcon/userIcon";
 import TweetContent from "../../atoms/tweetContent/tweetContent";
 
-const user = {
-  name: "test",
-  image: "http://placehold.jp/100x100.png"
-};
+interface Props {
+  tweet: any;
+}
 
 /**
  * TODO: できればスマホレイアウト時にUserIconのサイズをsmにしたい
  */
-const Tweet: FC<{}> = () => {
+const Tweet: FC<Props> = ({ tweet }) => {
+  const { user } = tweet;
+
   const handleClickAction = (id: string) => {
     console.log(id);
   };
@@ -25,7 +26,7 @@ const Tweet: FC<{}> = () => {
         <UserIcon user={user} />
       </div>
       <div css={styles.inner}>
-        <TweetContent clickAction={handleClickAction} />
+        <TweetContent tweet={tweet} clickAction={handleClickAction} />
       </div>
     </li>
   );

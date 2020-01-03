@@ -1,19 +1,18 @@
 import React, { FC } from "react";
 import { css } from "@emotion/core";
 
-export interface User {
-  name: string;
-  image: string;
-}
-
 export interface Props {
-  user: User;
+  user: any;
   size?: string;
 }
 
 const UserIcon: FC<Props> = ({ user, size }) => (
   <div css={styles.root} className={size}>
-    <img css={styles.image} src={user.image} alt={user.name} />
+    <img
+      css={styles.image}
+      src={user.profile_image_url_https}
+      alt={user.name}
+    />
   </div>
 );
 
