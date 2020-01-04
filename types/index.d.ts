@@ -4,13 +4,9 @@ interface StyleObject {
 
 interface PageNavigationItem {
   id: string;
+  path: string;
   text?: string;
   icon?: any; // ReactElement
-}
-
-interface TrendItem {
-  name: string;
-  count: number;
 }
 
 interface User {

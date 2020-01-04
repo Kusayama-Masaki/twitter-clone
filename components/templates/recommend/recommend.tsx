@@ -1,20 +1,23 @@
 import React, { FC } from "react";
 import { css } from "@emotion/core";
 
-import RecommendTrend from "../../organisms/recommendTrend/recommendTrend";
+import RecommendTrends from "../../organisms/recommendTrends/recommendTrends";
 import RecommendUser from "../../organisms/recommendUser/recommendUser";
 
-const Recommend: FC = () => (
+interface Props {
+  trends: any[];
+}
+
+const Recommend: FC<Props> = ({ trends }) => (
   <div css={styles.root}>
-    <RecommendTrend />
+    <RecommendTrends trends={trends} />
     <RecommendUser />
   </div>
 );
 
 const styles = {
   root: css`
-    position: sticky;
-    top: 15px;
+    margin-top: 15px;
   `
 };
 

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Link from "next/link";
 import { css } from "@emotion/core";
 import { mq } from "../../../assets/styles/mixins";
 import { colors } from "../../../assets/styles/variables";
@@ -15,18 +16,20 @@ export interface Props {
 }
 
 const PageNavigationItem: FC<Props> = ({ item, clickItem }) => {
-  const { id, text, icon } = item;
+  const { id, path, text, icon } = item;
   const isIconOnly = !text;
 
   return (
-    <li css={styles.root} onClick={() => clickItem(id)}>
-      <div css={styles.inner} className={isIconOnly ? "isIconOnly" : ""}>
-        <div css={styles.inside}>
-          {icon && <div css={styles.icon}>{icon}</div>}
-          {text && <p css={styles.text}>{text}</p>}
+    <Link href={path}>
+      <li css={styles.root} onClick={() => clickItem(id)}>
+        <div css={styles.inner} className={isIconOnly ? "isIconOnly" : ""}>
+          <div css={styles.inside}>
+            {icon && <div css={styles.icon}>{icon}</div>}
+            {text && <p css={styles.text}>{text}</p>}
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </Link>
   );
 };
 

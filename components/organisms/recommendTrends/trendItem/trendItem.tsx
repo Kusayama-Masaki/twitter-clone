@@ -1,22 +1,25 @@
 import React, { FC } from "react";
+import Link from "next/link";
 import { css } from "@emotion/core";
 import { colors } from "../../../assets/styles/variables";
 
 interface Props {
-  item: TrendItem;
+  trend: any;
   clickItem: (name: string) => void;
 }
 
-const TrendItem: FC<Props> = ({ item, clickItem }) => {
-  const { name, count } = item;
+const TrendItem: FC<Props> = ({ trend, clickItem }) => {
+  const { name, query, tweet_volume } = trend;
 
   return (
     <li css={styles.root} onClick={() => clickItem(name)}>
-      <section>
-        <p css={styles.text}>日本のトレンド</p>
-        <h3 css={styles.name}>{name}</h3>
-        <p css={styles.count}>{count}件のツイート</p>
-      </section>
+      <Link href={`/search?q=${query}`}>
+        <section>
+          <p css={styles.text}>日本のトレンド</p>
+          <h3 css={styles.name}>{name}</h3>
+          {tweet_volume && <p css={styles.count}>{tweet_volume}件のツイート</p>}
+        </section>
+      </Link>
     </li>
   );
 };
