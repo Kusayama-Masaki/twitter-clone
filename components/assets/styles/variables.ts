@@ -19,7 +19,8 @@ export const colors: StyleObject = {
   lightBlack: "#38444d",
   gray: "#8899a6",
   blue: "#1da1f2",
+  lightBlue: "#1b2b39",
   navy: "#131e26",
-  lightNavy: "#1b2b39",
+  lightNavy: "#16232d",
   white: "#fff"
 };

@@ -12,7 +12,8 @@ import {
   faRetweet,
   faHeart,
   faToolbox,
-  faCog
+  faCog,
+  faSearch
 } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faGetPocket } from "@fortawesome/free-brands-svg-icons";
 
@@ -30,6 +31,7 @@ library.add(
   faHeart,
   faToolbox,
   faCog,
+  faSearch,
   faTwitter,
   faGetPocket
 );

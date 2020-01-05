@@ -44,7 +44,7 @@ const styles = {
       color: ${colors.blue};
       cursor: pointer;
       > div {
-        background-color: ${colors.lightNavy};
+        background-color: ${colors.lightBlue};
       }
     }
   `,

@@ -7,6 +7,9 @@ import BaseLayout from "../components/templates/baseLayout/baseLayout";
 import Home from "../components/templates/home/home";
 import Recommend from "../components/templates/recommend/recommend";
 
+// import tweets from "../__fixtures__/tweets";
+// import trends from "../__fixtures__/trends";
+
 interface Props {
   tweets: any[];
   trends: any[];

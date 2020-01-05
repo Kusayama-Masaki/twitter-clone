@@ -23,6 +23,7 @@ const SectionBox: FC<Props> = props => {
 
 const styles = {
   root: css`
+    margin-top: 5px;
     border-radius: 10px;
     border: 1px solid ${colors.lightBlack};
     & + & {

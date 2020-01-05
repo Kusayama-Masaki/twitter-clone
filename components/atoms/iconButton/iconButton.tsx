@@ -8,12 +8,13 @@ import { colors } from "../../assets/styles/variables";
 export interface Props {
   icon: IconProp;
   size?: SizeProp;
+  color?: string;
 }
 
-const IconButton: FC<Props> = ({ icon, size, children }) => (
+const IconButton: FC<Props> = ({ icon, size, color, children }) => (
   <div css={styles.root}>
     <span css={styles.icon} className="icon">
-      <FontAwesomeIcon icon={icon} size={size} />
+      <FontAwesomeIcon icon={icon} size={size} color={color} />
     </span>
     {children && <span css={styles.text}>{children}</span>}
   </div>
@@ -27,7 +28,7 @@ const styles = {
     cursor: pointer;
     &:hover {
       > .icon {
-        background-color: ${colors.lightNavy};
+        background-color: ${colors.lightBlue};
       }
     }
   `,
