@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { css } from "@emotion/core";
+import { colors } from "../../assets/styles/variables";
 
 import Tweet from "../../molecules/tweet/tweet";
 
@@ -16,7 +17,9 @@ const Timeline: FC<Props> = ({ tweets }) => (
 );
 
 const styles = {
-  root: css``
+  root: css`
+    background-color: ${colors.navy};
+  `
 };
 
 export default Timeline;

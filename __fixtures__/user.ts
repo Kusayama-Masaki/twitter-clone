@@ -1,0 +1,51 @@
+const user = {
+  id: 140405105,
+  id_str: "140405105",
+  name: "Masaki Kusayama",
+  screen_name: "ksymmsk",
+  location: "",
+  description: "",
+  url: null,
+  entities: { description: { urls: [] } },
+  protected: false,
+  followers_count: 435,
+  friends_count: 474,
+  listed_count: 21,
+  created_at: "Wed May 05 12:05:42 +0000 2010",
+  favourites_count: 1647,
+  utc_offset: null,
+  time_zone: null,
+  geo_enabled: true,
+  verified: false,
+  statuses_count: 9520,
+  lang: null,
+  contributors_enabled: false,
+  is_translator: false,
+  is_translation_enabled: false,
+  profile_background_color: "022330",
+  profile_background_image_url:
+    "http://abs.twimg.com/images/themes/theme15/bg.png",
+  profile_background_image_url_https:
+    "https://abs.twimg.com/images/themes/theme15/bg.png",
+  profile_background_tile: false,
+  profile_image_url:
+    "http://pbs.twimg.com/profile_images/1143821671297458177/uAwDdVrO_normal.png",
+  profile_image_url_https:
+    "https://pbs.twimg.com/profile_images/1143821671297458177/uAwDdVrO_normal.png",
+  profile_link_color: "0084B4",
+  profile_sidebar_border_color: "A8C7F7",
+  profile_sidebar_fill_color: "C0DFEC",
+  profile_text_color: "333333",
+  profile_use_background_image: true,
+  has_extended_profile: true,
+  default_profile: false,
+  default_profile_image: false,
+  can_media_tag: false,
+  followed_by: false,
+  following: false,
+  follow_request_sent: false,
+  notifications: false,
+  translator_type: "none"
+};
+
+export default user;
